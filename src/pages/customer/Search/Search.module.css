@@ -1,0 +1,33 @@
+.search-wrapper {
+    display: flex;
+    margin: 50px 50px 0 50px;
+    gap: 40px;
+}
+
+.colleft {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-result {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 24px;
+    max-height: 142px;
+}
+
+.item-container {
+    display: flex;
+}

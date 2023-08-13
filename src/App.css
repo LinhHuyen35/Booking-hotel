@@ -1,0 +1,72 @@
+/* @import url('http://fonts.cdnfonts.com/css/circular-std');
+@import url('http://fonts.cdnfonts.com/css/allison-script');
+ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anek+Odia:wght@500;700&family=Fredoka:wght@600&family=Roboto:wght@300&family=Source+Sans+Pro:wght@300;700&display=swap');
+:root {
+  --white: #fff;
+  --black: #000;
+  --primary: #00a77f;
+  --eoe2e6: #e0e2e6;
+  --secondBlack: #484848;
+
+  --font-family: 'Inter-fallback';
+  --font-allision: 'Allision_Script';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  font-family: var(--font-family);
+}
+
+button,
+input,
+[tabindex] {
+  outline: none;
+  border: none;
+}
+
+input[type='password']::-ms-reveal,
+input[type='password']::-webkit-inner-spin-button {
+  display: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'Inter-fallback';
+  size-adjust: 107%;
+  src: local('Arial');
+}
+@font-face {
+  font-family: 'Allision_Script';
+  src: url('../src/assets/Fonts/Allison_Script.woff');
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

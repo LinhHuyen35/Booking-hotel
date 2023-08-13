@@ -1,0 +1,129 @@
+.header {
+  position: relative;
+  background-color: #eff0f2;
+  height: 82px;
+}
+
+.menu__relocate {
+  position: absolute;
+  top: 34.15%;
+  bottom: 26.83%;
+  left: 6.89%;
+  right: 80.99%;
+  font-family: var(--font-allision);
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.menu-nav {
+  position: absolute;
+  right: 6.09%;
+  left: 29%;
+  top: 27.24%;
+  bottom: 40.24%;
+  text-align: center;
+}
+
+.menu-nav-host {
+  position: absolute;
+  right: -8.91%;
+  left: 29%;
+  top: 27.24%;
+  bottom: 40.24%;
+  text-align: center;
+}
+
+.menu-nav__item {
+  min-width: 150px;
+  display: inline-block;
+  padding: 8px;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.menu-nav__item:hover .menu-nav__link {
+  color: #ffffff;
+}
+.menu-nav__item:hover {
+  background-color: #9a9a9a;
+  color: #ffffff;
+}
+
+.menu-nav__item a {
+  padding: 10px;
+}
+
+.menu-nav__link {
+  position: relative;
+  text-decoration: none;
+  transition: 0.3s ease-in;
+}
+
+.menu-nav__link::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  width: 0;
+  left: 0;
+  height: 0;
+  background-color: var(--primary);
+  transition: 0.3s ease-in;
+}
+
+.user-avatar {
+  position: absolute;
+  right: 45px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 180px;
+  background: #fff;
+  box-shadow: 0 0 10px 5px #c2c6cc;
+  border-radius: 8px;
+  max-height: min((100vh - 96px) - 60px, 734px);
+  min-height: 100px;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.sign-in-option {
+  list-style-type: none;
+  text-align: start;
+}
+
+.sign-in-list {
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.sign-in-list:hover a {
+  color: #fff;
+}
+
+.sign-in-list:hover {
+  opacity: 0.7;
+  background-color: #9a9a9a;
+}
+
+.host {
+  min-height: 70px;
+}

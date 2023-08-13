@@ -1,0 +1,97 @@
+.sign-up {
+    position: relative;
+    min-height: 100vh;
+}
+
+.sign-up__top {
+    position: relative;
+    align-self: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    width: 100%;
+}
+
+.sign-up__top::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #e0e2e6;
+}
+
+.close-icon__container {
+    font-size: 20px;
+}
+
+.sign-up__intro {
+    align-self: flex-start;
+    margin-top: 60px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #24445B;
+
+}
+
+.sign-up__desc {
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.or {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    color: #7f7f7f;
+    width: 50%;
+    text-align: center;
+}
+
+.or::after {
+    content: "";
+    position: absolute;
+    top: 65%;
+    right: -22%;
+    transform: translate(-50%,-50%);
+    height: 1px;
+    width: 43%;
+    background-color: #cccccc;
+}
+
+.or::before {
+    content: "";
+    position: absolute;
+    top: 65%;
+    left: 22%;
+    transform: translate(-50%,-50%);
+    height: 1px;
+    width: 43%;
+    background-color: #cccccc;
+}
+
+.sign-up__alt--fb {
+    color: #fff;
+    background-color: #405A93;
+    border: 1px solid #000;
+    border-radius: 392px;
+    width: 35%;
+    padding: 10px 50px;
+    margin-bottom: 30px;
+}
+
+.sign-up__alt--google {
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 392px;
+    width: 35%;
+    padding: 10px 50px;
+    
+}
+

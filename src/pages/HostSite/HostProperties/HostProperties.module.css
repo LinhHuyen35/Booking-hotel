@@ -1,0 +1,22 @@
+.top-properties {
+  margin: 50px 140px;
+}
+
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.add-button {
+  text-decoration: underline;
+  color: #363ddc;
+}
+
+.properties-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  grid-auto-rows: 330px;
+  margin-bottom: 100px;
+}

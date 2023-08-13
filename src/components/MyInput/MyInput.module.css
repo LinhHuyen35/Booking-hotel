@@ -1,0 +1,32 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-bottom: 24px;
+}
+
+.account-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.error {
+    margin-top: 5px;
+    align-self: flex-start;
+    color: red;
+}
+
+.label {
+    align-self: flex-start;
+    color: #b9bbbe;
+}
+
+.account-edit {
+    align-self: flex-start;
+    margin-left: 0;
+}

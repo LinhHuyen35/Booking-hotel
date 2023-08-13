@@ -1,0 +1,35 @@
+.radio-formik {
+    text-align: center;
+    font-size: 18px;
+}
+
+.add_type {
+    display: flex;
+    cursor: pointer;
+    background-color:  #EFF0F2;
+    border-radius: 6px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.name_type {
+    font-size: 18px;
+    font-family: 'Montserrat';
+    flex: 1;
+    margin-left: 28px;
+}
+
+.radio {
+    box-sizing: border-box;
+    appearance: none;
+    background: #6b6c6e;
+    outline: 2px none #333;
+    width: calc(100% / 2.8);
+    aspect-ratio: 1;
+}
+
+
+.radio:checked {
+    background:  green;
+    
+}

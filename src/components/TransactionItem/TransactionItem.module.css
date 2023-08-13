@@ -1,0 +1,35 @@
+.transaction-item {
+    height: 80px;
+    width: 100%;
+    background-color: #eff0f2;
+}
+
+.item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+
+}
+
+.item-information {
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.time {
+    font-size: 13px;
+    font-weight: 500;
+    color: #9a9a9a;
+}
+
+.income {
+    font-size: 20px;
+    font-weight: 600;
+}
