@@ -15,8 +15,10 @@ import {
 
 const cx = classNames.bind(styles);
 export default function KpiCardGrid() {
+  const hotelData = useSelector(getAllHotel);
   const [isActive, setIsActive] = useState(0);
-  const [idOfHotel, setIdOfHotel] = useState();
+
+  const [idOfHotel, setIdOfHotel] = useState(null);
   const dispatch = useDispatch();
 
   const user = (() => {
@@ -24,7 +26,6 @@ export default function KpiCardGrid() {
     return storageRoomsData ?? [];
   })();
   const [selectedView, setSelectedView] = useState('1');
-  const hotelData = useSelector(getAllHotel);
 
   const handleClick = (item, index) => {
     setIsActive(index);
@@ -71,7 +72,6 @@ export default function KpiCardGrid() {
                     handleClick(item, index);
                   }}
                 >
-                  {console.log(isActive !== item.id)}
                   {item.name}
                 </div>
               ))}

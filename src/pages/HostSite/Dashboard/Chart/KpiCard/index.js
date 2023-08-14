@@ -10,7 +10,9 @@ import {
   Text,
 } from '@tremor/react';
 import axios from 'axios';
+import { getAllHotel } from 'features/hostHotelSlice';
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 type Kpi = {
   title: string,
@@ -50,11 +52,36 @@ const kpiData: Kpi[] = [
 
 export default function KpiCard({ hotelId }) {
   // const [customerData, setCustomerData] = useState([]);
-  const [data, setData] = useState([]);
-  console.log(data);
+
+  const [data, setData] = useState([
+    {
+      title: 'Profit',
+      metric: '$ 12,699',
+      progress: 15.9,
+      target: '$ 80,000',
+      delta: '13.2%',
+      deltaType: 'moderateIncrease',
+    },
+    {
+      title: 'Cancelled',
+      metric: '45,564',
+      progress: 36.5,
+      target: '125,000',
+      delta: '23.9%',
+      deltaType: 'increase',
+    },
+    {
+      title: 'Customers',
+      metric: '1,072',
+      progress: 53.6,
+      target: '2,000',
+      delta: '10.1%',
+      deltaType: 'moderateDecrease',
+    },
+  ]);
   const date = new Date();
   const dateDay = date.toISOString().split('T')[0];
-  console.log(dateDay);
+  // const dateDay = '2023 - 12 - 08';
   useEffect(() => {
     // const fetchData = async () => {
     //   const res = await axios.get(
@@ -78,9 +105,8 @@ export default function KpiCard({ hotelId }) {
     };
     fetchDashboardData();
     // fetchData();
-  }, []);
+  }, [hotelId, dateDay]);
 
-  console.log(data);
   const itemTitle = ['Booking', 'Customer', 'Cancelled'];
   return (
     <Grid numColsLg={3} className="gap-6 mt-6">

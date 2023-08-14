@@ -50,7 +50,6 @@ export const RoundChart = ({ hotelId }) => {
       vote: 1908,
     },
   ]);
-  console.log(data);
   useEffect(() => {
     const fetchData = async () => {
       const res = await axios.get(
@@ -64,7 +63,7 @@ export const RoundChart = ({ hotelId }) => {
       setData(newData);
     };
     fetchData();
-  }, [data, hotelId]);
+  }, [hotelId]);
   return (
     <Card>
       <Title>Vote</Title>
