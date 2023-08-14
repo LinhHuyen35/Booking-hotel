@@ -18,7 +18,7 @@ export default function KpiCardGrid() {
   const hotelData = useSelector(getAllHotel);
   const [isActive, setIsActive] = useState(0);
 
-  const [idOfHotel, setIdOfHotel] = useState(null);
+  const [idOfHotel, setIdOfHotel] = useState(6);
   const dispatch = useDispatch();
 
   const user = (() => {

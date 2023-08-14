@@ -79,9 +79,7 @@ export default function KpiCard({ hotelId }) {
       deltaType: 'moderateDecrease',
     },
   ]);
-  const date = new Date();
-  const dateDay = date.toISOString().split('T')[0];
-  // const dateDay = '2023 - 12 - 08';
+
   useEffect(() => {
     // const fetchData = async () => {
     //   const res = await axios.get(
@@ -92,20 +90,20 @@ export default function KpiCard({ hotelId }) {
     const fetchDashboardData = async () => {
       const [res1, res2, res3] = await Promise.all([
         await axios.get(
-          `https://103.184.113.181:447/kpi/booking?hotel_id=${hotelId}&date=${dateDay}`
+          `https://103.184.113.181:447/kpi/booking?hotel_id=${hotelId}&date=2023-08-13`
         ),
         await axios.get(
-          `https://103.184.113.181:447/kpi/customer?hotel_id=${hotelId}&date=${dateDay}`
+          `https://103.184.113.181:447/kpi/customer?hotel_id=${hotelId}&date=2023-08-13`
         ),
         await axios.get(
-          `https://103.184.113.181:447/kpi/cancelled?hotel_id=${hotelId}&date=${dateDay}`
+          `https://103.184.113.181:447/kpi/cancelled?hotel_id=${hotelId}&date=2023-08-13`
         ),
       ]);
       setData([res1.data[0], res2.data[0], res3.data[0]]);
     };
     fetchDashboardData();
     // fetchData();
-  }, [hotelId, dateDay]);
+  }, [hotelId]);
 
   const itemTitle = ['Booking', 'Customer', 'Cancelled'];
   return (

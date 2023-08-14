@@ -32,6 +32,7 @@ function Account({ host }) {
   const handleEdit = () => {
     setEditProfile(!editProfile);
   };
+  console.log(accountData);
 
   const [uploadedImageUrl, setUploadedImageUrl] = useState('');
   const profileUpload = async (file) => {
@@ -63,10 +64,11 @@ function Account({ host }) {
 
   const putData = async (values) => {
     try {
-      await axios.put(
+      const res = await axios.put(
         `https://103.184.113.181/customer/${account.id}`,
         JSON.stringify(values)
       );
+      console.log(res);
       setEditProfile(false);
       window.location.href = '/Account';
     } catch (error) {
@@ -107,7 +109,7 @@ function Account({ host }) {
                 ? accountData?.user?.avatar
                 : 'https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?size=626&ext=jpg&ga=GA1.2.1706574637.1686470385&semt=ais'
             }
-            alt="Error"
+            alt="No avatar"
           />
           <label
             htmlFor="image1"
